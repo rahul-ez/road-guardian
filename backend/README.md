@@ -6,7 +6,7 @@ The backend module provides a lightweight, high-performance Flask inference serv
 
 ## Features
 
-- **Object Detection API**: Accepts images from mobile devices and runs inference using TensorFlow SavedModel.
+- **Object Detection API**: Accepts images from mobile devices and runs inference using **SSD MobileNet V2** (TensorFlow SavedModel).
 - **Automated Visual Annotation**: Draws bounding boxes, confidence percentages, and GPS coordinates directly on detected pothole frames using OpenCV.
 - **CSV & Storage Logging**: Automatically saves annotated images to `detections/` and appends entries to `detections.csv`.
 - **Interactive Heatmap UI**: Embedded Leaflet.js dashboard with heatmap visualization, dynamic statistics, and image preview popups.

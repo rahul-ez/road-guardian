@@ -36,7 +36,7 @@
 
 ## Key Features
 
-- **Real-Time Edge & Cloud Detection**: Detect road potholes instantly from live camera streams or uploaded pictures using trained YOLOv8 & TensorFlow models.
+- **Real-Time Edge & Cloud Detection**: Detect road potholes instantly from live camera streams or uploaded pictures using trained **SSD MobileNet V2 (TensorFlow)** and **YOLOv8** models.
 - **Telemetry & GPS Geo-Tagging**: Every detected pothole is automatically annotated with bounding boxes, confidence percentages, timestamp, and GPS coordinates (Latitude/Longitude).
 - **Interactive Heatmap & Spatial Analytics**: View city-wide or route-specific road hazards on a responsive Leaflet-powered heatmap with confidence color grades (High, Medium, Low) and photo popups.
 - **Cross-Platform Flutter Mobile Apps**:
@@ -241,7 +241,7 @@ Performs object detection on an uploaded image, saves the annotated image with G
 
 | Domain | Technologies Used |
 |---|---|
-| **Computer Vision & ML** | YOLOv8 Nano, TensorFlow 2.x, OpenCV, ONNX, TFLite |
+| **Computer Vision & ML** | SSD MobileNet V2 (TensorFlow 2.x), YOLOv8 Nano, OpenCV, ONNX, TFLite |
 | **Backend & API** | Python, Flask, Flask-CORS |
 | **Mobile Frontend** | Flutter, Dart, Provider, GoRouter, Camera Plugin, Geolocator |
 | **Geospatial & Mapping** | Leaflet.js, OpenStreetMap, Leaflet.heat, Google Maps API |
