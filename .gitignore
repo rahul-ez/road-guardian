@@ -1,0 +1,88 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flutter & Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+*/build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+app.*.symbols
+app.*.map.json
+
+# Android Studio / Gradle
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+.gradle/
+local.properties
+**/android/local.properties
+**/android/.gradle/
+**/android/captures/
+**/android/gradleBuild/
+
+# iOS / Xcode
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Pods/
+**/ios/Runner.xcworkspace/xcuserdata/
+
+# Node / Bun
+node_modules/
+bun.lockb
+.npm
+.eslintcache
+
+# IDE & Editors
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Temporary & Log files
+*.log
+*.tmp
+*.bak
+backend/detections

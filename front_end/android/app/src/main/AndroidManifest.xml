@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Add these if using Google Maps SDK -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:label="Road Guardian"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            
+            <!-- Existing intent filters -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <!-- ===== ADD THESE NEW INTENT FILTERS FOR GOOGLE MAPS ===== -->
+            <!-- For opening Google Maps links -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="maps.google.com" />
+                <data android:host="www.google.com" />
+                <data android:pathPrefix="/maps" />
+            </intent-filter>
+
+            <!-- For geo: URIs -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="geo" />
+            </intent-filter>
+            <!-- ===== END OF GOOGLE MAPS ADDITIONS ===== -->
+
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+        </activity>
+
+        <!-- ===== ADD THESE FOR GOOGLE MAPS SDK (if embedding maps) ===== -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" /> <!-- Replace with your actual API key -->
+        <!-- ===== END OF MAPS SDK CONFIG ===== -->
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        
+        <!-- ===== ADD THESE FOR GOOGLE MAPS PACKAGE VISIBILITY ===== -->
+        <package android:name="com.google.android.apps.maps" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+        <!-- ===== END OF PACKAGE VISIBILITY ===== -->
+    </queries>
+</manifest>
